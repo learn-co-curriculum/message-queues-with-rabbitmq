@@ -2,7 +2,7 @@ class Product < ActiveRecord::Base
   validates_presence_of :name, :description, :price, :views
   validates :name, uniqueness: true
 
-  after_save :publish_update
+  after_save :publish_upsert
   after_destroy :publish_destroy
 
   private
