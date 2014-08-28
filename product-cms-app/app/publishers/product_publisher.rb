@@ -1,10 +1,16 @@
 class ProductPublisher
   def self.upsert(product)
-    # TODO: Your code goes here!
+    ch = conn.create_channel
+    exchange = ch.direct('products', durable: true)
+    exchange.publish(product.attributes.to_json, routing_key: 'product_upsert')
+    ch.close
   end
 
   def self.destroy(product)
-    # TODO: Your code goes here!
+    ch = conn.create_channel
+    exchange = ch.direct('products', durable: true)
+    exchange.publish(product.attributes.to_json, routing_key: 'product_destroy')
+    ch.close
   end
 
   def self.conn
