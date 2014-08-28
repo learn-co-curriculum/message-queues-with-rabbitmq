@@ -1,0 +1,10 @@
+<h1>Products</h1>
+<p><a href="/products/new">new product</a></p>
+
+<% @products.each do |product| %>
+  <li>
+    <a href="/products/<%= product.id %>/edit">
+      <%= product.name %>
+    </a>
+  </li>
+<% end %>

@@ -1,0 +1,24 @@
+<h1>Edit Product</h1>
+
+<form action="/products/<%= @product.id %>/update" method="POST">
+  <label for="name">Name</label>
+  <div><input name="product[name]" id="name" type="text" value="<%= @product.name %>" /></div>
+  <label for="description">Description</label>
+  <div>
+    <textarea name="product[description]" id="description"><%= @product.description %></textarea>
+  </div>
+  <label for="price">Price</label>
+  <div>
+    <input name="product[price]" id="price" type="integer" value="<%= @product.price %>"/>
+  </div>
+  <div><input type="submit" value="Update"/></div>
+</form>
+
+<div style="background-color: red;">
+  <h2>Danger Zone!</h2>
+  <div>
+    <form action="/products/<%= @product.id %>/destroy" method="POST">
+      <input type="submit" value="DELETE PRODUCT">
+    </form>
+  </div>
+</div>

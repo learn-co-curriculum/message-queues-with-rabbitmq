@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo 'Stopping thin...'
+if [[ -n $(ps aux | grep -E 'thin' | grep -v grep) ]]; then
+  kill -15 $(ps aux | grep -E 'thin' | grep -v grep | awk '{print $2}')
+fi
+echo 'Done.'
