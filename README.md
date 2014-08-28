@@ -60,6 +60,11 @@ To get your development environment up:
 
 1. `brew install rabbitmq`
 
+2. Use `bin/restart` to start up the CMS and Sales servers.
+
+There is also a `bin/reset` that cleans out RabbitMQ (removes all
+queues, exchanges, etc.).
+
 ## History
 Messaging queues got their start in 1983 when
 [Vivek Ranadive](http://en.wikipedia.org/wiki/Vivek_Ranadiv%C3%A9) created the
