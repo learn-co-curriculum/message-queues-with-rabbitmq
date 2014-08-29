@@ -1,0 +1,6 @@
+#!/bin/bash
+rabbitmqctl status > /dev/null 2>&1
+if [ $? -ne 0 ]; then
+  echo "Starting rabbitmq-server..."
+  rabbitmq-server -detached > /dev/null 2>&1
+fi

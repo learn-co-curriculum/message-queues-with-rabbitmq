@@ -1,5 +1,0 @@
-#!/bin/bash
-
-sh bin/stop
-sleep 1
-sh bin/start

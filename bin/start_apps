@@ -1,16 +1,6 @@
 #!/bin/bash
-
-if [[ -z $(ps aux | grep 'rabbitmq' | grep -v grep) ]]; then
-  echo "Starting rabbitmq-server..."
-  rabbitmq-server &
-  sleep 4
-fi
-
 echo "Starting product cms app..."
 thin -c product-cms-app start -d -p 9292 -l log/thin.log
-
 echo "Starting product sales app..."
 thin -c product-sales-app start -d -p 9293 -l log/thin.log
-
-echo
 echo "Done."
