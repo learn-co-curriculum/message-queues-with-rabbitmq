@@ -42,6 +42,9 @@ DESC
 
   describe 'CMS destroy' do
     it 'destroys the product on Sales' do
+      visit('http://localhost:9293/products')
+      expect(page).to have_content(product_name)
+
       visit("http://localhost:9292/products")
       click_on(product_name)
       click_button 'DELETE PRODUCT'
