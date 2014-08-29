@@ -15,6 +15,6 @@ group :test do
   gem 'rspec'
   gem 'capybara'
   gem 'rack-test'
-  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
   gem 'database_cleaner'
 end

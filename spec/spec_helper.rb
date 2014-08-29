@@ -6,7 +6,7 @@ Bundler.require(:default, ENV['SINATRA_ENV'])
 require 'capybara/rspec'
 require 'capybara/dsl'
 
-Capybara.default_driver = :webkit
+Capybara.default_driver = :selenium
 
 RSpec.configure do |config|
   config.include Capybara::DSL
@@ -18,24 +18,13 @@ RSpec.configure do |config|
   end
 
   config.before :all do
-    stop
-    reset
-    start
+    puts '  Flushing rabbitmq and restarting applications...'
+    `bin/start_rabbitmq`
+    `bin/reset_rabbitmq`
+    `bin/restart_apps`
   end
 
   config.after :all do
     stop
   end
-end
-
-def stop
-  `bin/stop`
-end
-
-def reset
-  `bin/reset`
-end
-
-def start
-  `bin/start`
 end
