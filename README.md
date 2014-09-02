@@ -35,6 +35,8 @@ This is not a guide for implementing a highly robust messaging solution,
 it is simply enough to begin understanding the concepts involved with using
 RabbitMQ.
 
+For this exercise, you'll be using the [Bunny](https://github.com/ruby-amqp/bunny) library, a wrapper around the Ruby [amqp gem](https://github.com/ruby-amqp/amqp).
+
 Using the tests for guidance, connect the provided CMS application with
 the sales application. Whenever a product is created, updated, or
 destroyed in the CMS, it should be reflected in the Sales application.
