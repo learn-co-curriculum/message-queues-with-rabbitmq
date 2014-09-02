@@ -7,6 +7,8 @@ language: ruby
 
 ## Overview
 
+RabbitMQ is a message queueing system, meaning that it's responsibility is to receive messages containing a data payload and then distribute that message to all interested parties based on certain criteria.
+
 As the world's technology becomes more distributed, the need to
 of share information between various entities becomes increasingly
 important. Using message-oriented middleware like RabbitMQ, an
