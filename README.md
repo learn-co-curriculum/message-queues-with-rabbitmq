@@ -30,11 +30,6 @@ the system, the message broker.
 "As with any system, adding another component can lead to reductions in performance and reliability, and can also make the system as a whole more difficult and expensive to maintain." - [wikipedia](http://en.wikipedia.org/wiki/Message-oriented_middleware#Disadvantages)
 
 ## Instructions
-
-This is not a guide for implementing a highly robust messaging solution,
-it is simply enough to begin understanding the concepts involved with using
-RabbitMQ.
-
 For this exercise, you'll be using the [Bunny](https://github.com/ruby-amqp/bunny) library, a wrapper around the Ruby [amqp gem](https://github.com/ruby-amqp/amqp).
 
 Using the tests for guidance, connect the provided CMS application with
@@ -59,6 +54,12 @@ The tests can be run with the `rspec` command.
 
 A web interface to the rabbitmq server can be found at
 http://localhost:15672/ with credentials guest/guest.
+
+Disclaimer:
+
+This is not a guide for implementing a highly robust messaging solution,
+it is simply enough to begin understanding the concepts involved with using
+RabbitMQ.
 
 ### Configuration
 
