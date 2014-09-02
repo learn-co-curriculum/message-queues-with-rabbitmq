@@ -37,7 +37,7 @@ the sales application. Whenever a product is created, updated, or
 destroyed in the CMS, it should be reflected in the Sales application.
 
 This interaction should take place using a direct exchange to place
-messages on two queues named "product_upsert" and "product_destroy".
+messages on two durable queues named "product_upsert" and "product_destroy".
 
 In the product-cms-app, write your implementatin in `app/publishers/product_publisher.rb`.
 
