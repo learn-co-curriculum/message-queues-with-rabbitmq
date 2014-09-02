@@ -43,6 +43,7 @@ This interaction should take place using a direct exchange to place
 messages on two queues named "product_upsert" and "product_destroy".
 
 In the product-cms-app, write your implementatin in `app/publishers/product_publisher.rb`.
+
 In the product-sales-app, write your implementation in `app/workers/product_consumer.rb`.
 
 First, you'll need to figure out what all that means. See these guides
