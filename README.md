@@ -66,9 +66,9 @@ To get your development environment up:
 
 1. `brew install rabbitmq`
 
-2. Use `bin/restart` to start up the CMS and Sales servers.
+2. Use `bin/restart_apps` to start up the CMS and Sales servers and `bin/start_rabbitmq` for the RabbitMQ server.
 
-There is also a `bin/reset` that cleans out RabbitMQ (removes all
+There is also a `bin/reset_rabbitmq` that cleans out RabbitMQ (removes all
 queues, exchanges, etc.).
 
 ## History
