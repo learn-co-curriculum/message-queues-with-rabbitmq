@@ -7,6 +7,8 @@ language: ruby
 
 ## Overview
 
+RabbitMQ is a message queueing system, meaning that it's responsibility is to receive messages containing a data payload and then distribute that message to all interested parties based on certain criteria.
+
 As the world's technology becomes more distributed, the need to
 of share information between various entities becomes increasingly
 important. Using message-oriented middleware like RabbitMQ, an
@@ -28,17 +30,18 @@ the system, the message broker.
 "As with any system, adding another component can lead to reductions in performance and reliability, and can also make the system as a whole more difficult and expensive to maintain." - [wikipedia](http://en.wikipedia.org/wiki/Message-oriented_middleware#Disadvantages)
 
 ## Instructions
-
-This is not a guide for implementing a highly robust messaging solution,
-it is simply enough to begin understanding the concepts involved with using
-RabbitMQ.
+For this exercise, you'll be using the [Bunny](https://github.com/ruby-amqp/bunny) library, a wrapper around the Ruby [amqp gem](https://github.com/ruby-amqp/amqp).
 
 Using the tests for guidance, connect the provided CMS application with
 the sales application. Whenever a product is created, updated, or
 destroyed in the CMS, it should be reflected in the Sales application.
 
 This interaction should take place using a direct exchange to place
-messages on two queues named "product_upsert" and "product_destroy".
+messages on two durable queues named "product_upsert" and "product_destroy".
+
+In the product-cms-app, write your implementatin in `app/publishers/product_publisher.rb`.
+
+In the product-sales-app, write your implementation in `app/workers/product_consumer.rb`.
 
 First, you'll need to figure out what all that means. See these guides
 on the Bunny docs:
@@ -52,6 +55,12 @@ The tests can be run with the `rspec` command.
 A web interface to the rabbitmq server can be found at
 http://localhost:15672/ with credentials guest/guest.
 
+Disclaimer:
+
+This is not a guide for implementing a highly robust messaging solution,
+it is simply enough to begin understanding the concepts involved with using
+RabbitMQ.
+
 ### Configuration
 
 #### Mac
@@ -60,9 +69,9 @@ To get your development environment up:
 
 1. `brew install rabbitmq`
 
-2. Use `bin/restart` to start up the CMS and Sales servers.
+2. Use `bin/restart_apps` to start up the CMS and Sales servers and `bin/start_rabbitmq` for the RabbitMQ server.
 
-There is also a `bin/reset` that cleans out RabbitMQ (removes all
+There is also a `bin/reset_rabbitmq` that cleans out RabbitMQ (removes all
 queues, exchanges, etc.).
 
 ## History
