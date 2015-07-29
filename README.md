@@ -1,7 +1,4 @@
----
-tags: bunny, rabbitmq, amqp, messaging, enterprise, scaling
-language: ruby
----
+
 
 # Messaging
 
