@@ -88,3 +88,5 @@ was one of the first implementations of AMQP.
 * [Why Rubyists Should Care About Messaging](http://www.rubyinside.com/why-rubyists-should-care-about-messaging-a-high-level-intro-5017.html)
 * [Bunny - Getting Started](http://rubybunny.info/articles/getting_started.html)
 * [Using channels with RabbitMQ](http://derickbailey.com/2014/03/26/2-lessons-learned-and-3-resources-for-for-learning-rabbitmq-on-nodejs/)
+
+<a href='https://learn.co/lessons/message-queues-with-rabbitmq' data-visibility='hidden'>View this lesson on Learn.co</a>
