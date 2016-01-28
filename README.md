@@ -89,4 +89,4 @@ was one of the first implementations of AMQP.
 * [Bunny - Getting Started](http://rubybunny.info/articles/getting_started.html)
 * [Using channels with RabbitMQ](http://derickbailey.com/2014/03/26/2-lessons-learned-and-3-resources-for-for-learning-rabbitmq-on-nodejs/)
 
-<a href='https://learn.co/lessons/message-queues-with-rabbitmq' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/message-queues-with-rabbitmq' title='Messaging'>Messaging</a> on Learn.co and start learning to code for free.</p>
